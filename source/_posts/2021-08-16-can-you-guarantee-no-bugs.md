@@ -17,8 +17,7 @@ This means our tests need to ensure complete behaviour in order to prevent AI (o
 npm init
 ```
 
-Unit Tests
-----------
+## Unit Tests
 
 Create a test file transaction.test.js with a sample test, just to check our tests are working:
 
@@ -134,8 +133,7 @@ npx jest
 
 How can we prevent that? Plus all other nulls, undefineds or invalid types that can reach our function?
 
-Type Checking
--------------
+## Type Checking
 
 We could just add an if condition and return or throw if the amount is null, or undefined, an object instead of a number, etc, and also check on every other argument, not forgetting to write a unit test for each case or... we can just add types. Types constrain the solution space, it could guide a computer to generate code only within the types we added. Once you go very strict about it, some even say that [if it compiles, it works](https://wiki.haskell.org/Why_Haskell_just_works).
 
@@ -211,8 +209,7 @@ We are so strict now, that certainly means we won't have issues with our code an
 
 But even if we go through this effort, what bugs may still be lurking out there? Let's say we wrote as much unit tests as we could and typed everything, how do we know we are still not missing some edge case? Maybe try random stuff and see if something breaks? Yeah! That's a good idea!
 
-Property-Based Testing
-----------------------
+## Property-Based Testing
 
 In Property-Based Testing, you generate lots of samples to give to your function and write some assertions about it. Because of this sampling, Property-Based is also known as Fuzz Testing, but I like the name Property-Based Testing better, because it highlights the most important concept to grasp about this kind of test: that you should assert on *properties* that your output must hold*,* not on specific examples like unit tests, on *properties.* It requires a different mindset to think about properties, personally for me it was hard to do, since I was for many years writing just regular unit tests.
 
@@ -342,8 +339,7 @@ export function transferMoney(
 
 So far our unit tests didn't require us to use a transaction, our types also didn't, neither did our property-based tests, no one found a counterexample for a transaction. We do know, however, from experience, that our code can fail at each of those lines of code, our server could die, leaving the database in an invalid state in the middle of the transfer, not to mention when there are multiple instances running this code in parallel and updating Alice and Bob balances at the same time. To solve it with unit tests we could mock each of those functions and see what happens if they fail, but if this was much larger, mocking every line of code and seeing what happens if they fail is very boring to say the least. Fortunately, there is a better way.
 
-Formal Specification
---------------------
+## Formal Specification
 
 If property based testing got you thinking about properties, formal specification will get you thinking about properties AND state. As you may have heard, [state is the root of all evil](https://henrikeichenhardt.blogspot.com/2013/06/why-shared-mutable-state-is-root-of-all.html). That's why functional programming folks want to push it away with pure functions, to a place we can reason better about it. Having stateless functions makes your program much easier to reason about, but you do need state at some point, otherwise your code is completely useless ([like Haskell](https://www.youtube.com/watch?v=iSmkqocn0oQ)).
 
@@ -470,8 +466,7 @@ Wow no errors! TLA+ could not find any issues on the 3.196 possible states it fo
 
 If you feel like it you can keep going, what would happen if we add another account? Say Alice, Bob and Carlo? Can you simulate the state changes that happen during a database transaction? Does it solve our problems?
 
-Conclusion
-----------
+## Conclusion
 
 Making a sure a function free of bugs is very hard, and the definition what "free of bugs" mean actually depends on your specification. On our every day jobs most of the issues are avoided by plain human experience and judgment, if you could not see the code, guaranteeing it is working is super difficult. Tools like property-testing and TLA+ allow us to get closer and closer, and while I have no idea if those tools will indeed help us bridge the connection with AI, I know they are fun to learn.
 
@@ -479,8 +474,7 @@ Thanks for reaching the end of this blogpost, let me know how you like it. I nee
 
 Now I kindly ask you to not leave yet and save the links listed below to read or watch later, they are more interesting than this one, and modeled my thinking about testing.
 
-More Content
-------------
+## More Content
 
 [They Write the Right Stuff](https://www.fastcompany.com/28121/they-write-right-stuff) - an article from 1996, on how space engineers get their softwared to be free of bugs
 
@@ -489,3 +483,9 @@ More Content
 [Making Impossible States Impossible](https://www.youtube.com/watch?v=IcgmSRJHu_8) - making the best use of your static types
 
 [Formal verification applied](https://www.youtube.com/watch?v=l9XZYI3jta0) - intro to TLA+ for devs
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}

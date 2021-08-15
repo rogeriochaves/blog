@@ -8,13 +8,13 @@ To start it locally:
 
 ```
 npm install
-npm run server
+npm start
 ```
 
 To deploy it:
 
 ```
 eval $(docker-machine env your-machine)
-docker-compose up -d
+docker-compose up -d --build
 ```
 
