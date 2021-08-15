@@ -7,3 +7,7 @@ ul.nav.nav-list
             - var act = !re.test(value) && "/" + current_url === value
             a.nav-list-link(class={active: act} href=url_for(value) target=tar)
                 != key
+
+    li.nav-list-item
+        a( href="/atom.xml" title="RSS Feed")
+            img(src=url_for("img/rss.svg") width="16px" style="vertical-align: middle; margin-top: -4px")
