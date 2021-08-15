@@ -9,3 +9,9 @@ The reason of that is that those platforms always change, their APIs, their rule
 This is why the Hello World post of this blog is actually not the first post of the entire blog, but in the middle. I'm migrating away from Medium as primary way of writing. I didn't want to fall on the trick many developers do to spend more time building their blog than actually writing, so I actually wanted to start writting on Tumblr, then Medium, then Dev.to, now Substack is the hottest thing, but platforms come and go all the time.
 
 Not anymore, building my own blog is the safest long-term solution no matter how basic it is, I will just slap some markdowns together and that's it. I may, however, copy and paste some of my posts in those other platforms, to try and get some distribution.
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}
