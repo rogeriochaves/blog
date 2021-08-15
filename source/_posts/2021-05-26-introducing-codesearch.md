@@ -31,3 +31,9 @@ Have a nice day!
 P.S. because of my problem remembering languages and being too lazy to do repeated boilerplate all the time, I also created unit, a tool which setup a test file for you in many languages, so you can TDD away without the annoying setup part:
 
 [https://github.com/rogeriochaves/unit](https://github.com/rogeriochaves/unit)
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}
