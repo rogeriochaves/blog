@@ -1,0 +1,8 @@
+version: "2"
+services:
+  app:
+    build: .
+    restart: always
+    # ports: # remove for production
+    #   - "8001:8001"
+    network_mode: host # remove for development
