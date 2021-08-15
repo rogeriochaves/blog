@@ -1,0 +1,171 @@
+@import "../constants"
+
+.post
+    padding-top 1em
+
+.post-block
+    .post-title
+        margin 0.65em 0
+        font-weight normal
+        font-size 2em
+        .post-title-link
+
+            color #2c3e50
+
+    .post-info
+        margin 1.2em 0
+        color #7f8c8d
+        span
+            margin-left 0.5rem
+        a.post-from
+            margin-left 0.5rem
+            padding 3px 6px
+            border-radius 5px
+            font-size 14px
+            color #333
+            &:hover
+                text-decoration underline
+
+.post-content
+    h2, h3, h4, h5, h6
+        position relative
+        margin 1em 0
+
+    h2, h3
+        font-size 22px
+
+    h4, h5, h6
+        font-size 18px
+    a
+        color link-color
+        word-break break-all
+        &:hover
+            text-decoration underline
+    blockquote
+        margin 2em 0
+        padding-left 20px
+        border-left .25em solid #dfe2e5
+        color #6a737d
+    img
+        display block
+        max-width 100%
+        margin 1em auto
+
+    & > table,
+    & > figure.highlight
+        box-shadow 0 1px 2px rgba(0,0,0,0.125)
+
+    .tip
+        position relative
+        margin 2em 0
+        padding 12px 24px 12px 30px
+        border-left 4px solid #f66
+        border-top-right-radius 2px
+        border-bottom-right-radius 2px
+        background-color #f8f8f8
+        br
+            display none
+
+    .tip:before
+        position absolute
+        top 14px
+        left -12px
+        content "!"
+        width 20px
+        height 20px
+        border-radius 100%
+        color #fff
+        font-size 14px
+        line-height 20px
+        font-weight bold
+        text-align center
+        background-color #f66
+        font-family 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
+
+#mask
+    position fixed
+    overflow scroll
+    width 100%
+    height 100%
+    padding 1em 0
+    background-color rgba(0, 0, 0, 0.5)
+    z-index 10
+    #mask-image
+        max-width 95%
+
+code,
+pre
+    font-size 0.8em
+    font-family 'Roboto Mono', Monaco, courier, monospace
+
+.highlight
+    position relative
+    margin 1em 0
+    border-radius 3px
+    line-height 1.1em
+    overflow-x auto
+    table, tr, td
+        width 100%
+        border-collapse collapse
+        padding 0
+        margin 0
+    .gutter
+        display none
+    .code pre
+        padding 1.2em 1.4em
+        line-height 1.5em
+        margin 0
+        .line
+            width auto
+            height 18px
+
+
+.codebase
+    position absolute
+    top 0
+    right 0
+    color #ccc
+    text-align right
+    font-size 0.75em
+    padding 5px 10px 0
+    line-height 15px
+    height 15px
+    font-weight 600
+
+.highlight
+  background: #23241f
+  color: #f8f8f2
+
+  .code
+    .highlight, .tag, .subst
+      color: #f8f8f2
+
+    .strong, .emphasis
+      color: #a8a8a2
+
+    .bullet, .quote, .number, .regexp, .literal, .link
+      color: #ae81ff
+
+    .code, .title, .section, .selector-class
+      color: #a6e22e
+
+    .strong
+      font-weight: bold
+
+    .emphasis
+      font-style: italic
+
+    .keyword, .selector-tag, .name, .attr
+      color: #f92672
+
+    .symbol, .attribute
+      color: #66d9ef
+
+    .params, .class .title
+      color: #f8f8f2
+
+    .string, .type, .built_in, .builtin-name, .selector-id, .selector-attr, .selector-pseudo, .addition, .variable, .template-variable
+      color: #e6db74
+
+    .comment, .deletion, .meta
+      color: #75715e

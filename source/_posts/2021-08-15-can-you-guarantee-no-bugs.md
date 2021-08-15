@@ -1,8 +1,7 @@
 ---
 title: Can you guarantee that a function has no bugs?
+subtitle: From unit tests to formal specification
 ---
-
-### From unit tests to formal specification
 
 Software is famously known to have flaws, good practices and automated tests have helped us reduce issues, but most of the industry pretty much gave up on the idea of having software completely free of bugs, instead we moved our strategy to delivering early and iterating faster, letting the real world be our QA, and the real world is indeed the best QA there is. But is that really the only way? How come we always have gaps when testing our sofware? I mean it's computers, why can't we like simulate all the bits and be sure to check everything? What if we do unit tests? Integration tests? E2E tests? Contract tests? Have 100% coverage? Do some Mutation tests? If we apply all the tricks we can, can we feel safe with code which written by other humans? What if the code was not written by a human, but a machine, like [Copilot](https://copilot.github.com/)?
 
@@ -10,7 +9,7 @@ The idea for this blogpost came from [an insight by Nicholas Tietz](https://ntie
 
 If you think about it, it's kinda like doing TDD, in which on the first step you need to "write a test that passes [iff](https://en.wikipedia.org/wiki/Iff "Iff") the feature's specifications are met". Then, on the seconds step you see it fail, and on the third step you "write the simplest code that passes the new test". This is the step that could be automated by a machine.
 
-Most important, and often overlooked by TDD beginners, it the keyword **simplest**. Write just enough to make the test green, nothing more, because this way you will be forced to write more tests for the functionality that you know is still missing, and then when you do, you are sure that functionality is tested as well. This is also a great way to think about what a machine will do, more often then not, given an objective, machines [WILL find the simplest solution](https://www.reddit.com/r/todayilearned/comments/at5e45/til_that_when_simple_ai_was_taught_to_play_tetris/), often surprising us humans.
+Most importantly, and often overlooked by TDD beginners, it the keyword **simplest**. Write just enough to make the test green, nothing more, because this way you will be forced to write more tests for the functionality that you know is still missing, and then when you do, you are sure that functionality is tested as well. This is also a great way to think about what a machine will do, more often then not, given an objective, machines [WILL find the simplest solution](https://www.reddit.com/r/todayilearned/comments/at5e45/til_that_when_simple_ai_was_taught_to_play_tetris/), often surprising us humans.
 
 This means our tests need to ensure complete behaviour in order to prevent AI (or other devs) from taking shortcuts. Can we do that? Write our tests so well that it will force our code to behave properly? Let's try, let's start our project:
 
@@ -83,7 +82,7 @@ module.exports = { transferMoney };
   ✓ transfers money from Alice to Bob (13 ms)
 ```
 
-Our tests passes! We did TDD which guided our implementation, moreover, if you run Jest with the --coverage flag you can see we have 100% coverage, so our code must be perfect and free of bugs right? Right!? What? Hard-coded values you say?
+Our tests passes! We did TDD which guided our implementation, moreover, if you run Jest with the `--coverage` flag you can see we have 100% coverage, so our code must be perfect and free of bugs right? Right!? What? Hard-coded values you say?
 
 Well, obviously, our code sucks, we didn't even had to use the parameters as our current test suite does not force us to. How can we force parameter usage? One solution is to write more tests with a slightly different value, to force the parameters to be used -- but that feels a bit stupid.
 
