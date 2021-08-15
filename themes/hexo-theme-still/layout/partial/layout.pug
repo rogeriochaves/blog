@@ -5,7 +5,8 @@ html(lang=config.language)
     body
         .wrap
             header
-                h1.title=theme.title
+                a.home-link(href="/")
+                    h1.title=config.title
                 include nav.pug
             main.container
                 block container

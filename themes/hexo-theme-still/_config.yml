@@ -1,12 +1,5 @@
 menu:
     Home: /
-    Archive: /archives/
-
-title: Rogerio Chaves
-keywords:
-description:
+    Blog: /blog/
 
 favicon: /favicon.ico?v=2018
-
-# Copyright Infomation
-startyear: 2017
