@@ -82,7 +82,7 @@ module.exports = { transferMoney };
   ✓ transfers money from Alice to Bob (13 ms)
 ```
 
-Our tests passes! We did TDD which guided our implementation, moreover, if you run Jest with the `--coverage` flag you can see we have 100% coverage, so our code must be perfect and free of bugs right? Right!? What? Hard-coded values you say?
+Our tests passes, we did TDD, and we have 100% coverage (you can check by using the `--coverage` flag), so our code must be perfect and free of bugs, right? Right!? What? Hard-coded values you say?
 
 Well, obviously, our code sucks, we didn't even had to use the parameters as our current test suite does not force us to. How can we force parameter usage? One solution is to write more tests with a slightly different value, to force the parameters to be used -- but that feels a bit stupid.
 
