@@ -28,3 +28,9 @@ python -m unittest tests/test_user.py
 Go to [github repo](https://github.com/rogeriochaves/unit) for instructions on how to install unit and all the languages supported. Feel free to open any issues there, feedbacks are very welcome.
 
 Thanks for reading!
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}
