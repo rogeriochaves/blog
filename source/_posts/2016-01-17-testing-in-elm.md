@@ -222,3 +222,9 @@ Feedbacks will be received with love ❤
 {% blockquote @yourusername https://optional-link.com %}
 If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
 {% endblockquote %}
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}

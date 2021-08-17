@@ -123,3 +123,9 @@ Sending the extra `foo` here won't break your app (full code: <https://ellie-app
 Of course, this doesn't have a lot of features that decoders have like `oneOf`, and again, **I do not recommend this**, because it is dangerous, but it is yet another way of decoding JSON in Elm.
 
 Cheers!
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}
