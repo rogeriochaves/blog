@@ -6,7 +6,9 @@ html(lang=config.language)
         .wrap
             header
                 a.home-link(href="/")
-                    h1.title=config.title
+                    h1.title
+                        img(src=url_for("img/profile-pic.png"), width="64", style="vertical-align: middle; padding-right: 10px")
+                        = config.title
                 include nav.pug
             main.container
                 block container
