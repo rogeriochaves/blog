@@ -7,7 +7,7 @@ html(lang=config.language)
             header
                 a.home-link(href="/")
                     h1.title
-                        img(src=url_for("img/profile-pic.png"), width="64", style="vertical-align: middle; padding-right: 10px")
+                        img.profile-pic(src=url_for("img/profile-pic.png"), width="64")
                         = config.title
                 include nav.pug
             main.container
