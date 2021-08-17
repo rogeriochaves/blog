@@ -102,3 +102,9 @@ Fun & Amazing
 [DolphinAttack: Inaudible Voice Command](https://www.youtube.com/watch?v=21HjF4A3WE4)\
 [Convolutional Network Demo from 1993](https://www.youtube.com/watch?v=FwFduRA_L6Q)\
 [When AI is the Product: The Rise of AI-Based Consumer Apps](https://a16z.com/2018/12/03/when-ai-is-the-product-the-rise-of-ai-based-consumer-apps/)
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}

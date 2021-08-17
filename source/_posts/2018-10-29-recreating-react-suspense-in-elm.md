@@ -127,3 +127,9 @@ What do you think? Should I turn elm-suspense into a library? Suggestions are we
 More details in the repository:
 
 <https://github.com/rogeriochaves/elm-suspense>
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}
