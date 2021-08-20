@@ -422,7 +422,7 @@ Finally, we have our **Invariants**! Those are the things we want to verify. Tho
 
 Those, unfortunatly, won't come automatically, they will come from thinking. What properties do you want your system to hold? This depends on your goal, on business requirements, on, well, specifications, we are just formalizing them. Like unit tests, they might have gaps, but being at a much higher-level, a single specification can cover way more ground. This is what [Nicholas Tietz](https://ntietz.com/tech-blog/future-of-software-engineering-is-formal-methods/) meant, we can let Copilot or future AIs generate the code, while we humans focus on the specifications. A language like TLA+ may allow us to define them at the highest level that is still non-ambiguous.
 
-Our first invariant **TypeOK** is a simple one, it's akim to type checks, we are making sure that on the msgs sent to the database *account* has always to belong in the constant *accounts*, and that the *amount* must be an integer.
+Our first invariant **TypeOK** is a simple one, it's akin to type checks, we are making sure that on the msgs sent to the database *account* has always to belong in the constant *accounts*, and that the *amount* must be an integer.
 
 Next is **BalancesAlwaysPositive**, we are a no-debt bank remember, so we assert that any point in time no balance is allowed to go negative, we already checked that with the property-based test and fixed it by introducing and `if (amount > balance_from.amount)` but could we be missing something?
 
