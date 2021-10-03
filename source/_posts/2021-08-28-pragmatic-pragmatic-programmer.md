@@ -206,3 +206,9 @@ To quote Nassim Taleb, "Redundancy is ambiguous because it seems like a waste if
 And why is this necessarily a bad thing? I have to bring up Taleb again, there is a reason why evolution brought us so many different animals, which survive through different ways, there is a reason why we have anti-monopoly laws, having different companies doing the same thing in different ways, this way you get the chance that one of them is actually better than the other.
 
 To be continued...
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}

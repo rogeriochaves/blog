@@ -88,3 +88,9 @@ I, like the manifesto, am not dismissing the value of having a plan, processes, 
 Understanding the reasoning behind why agile values work can hopefully give us answers to what is not covered by the manifesto. For example, does agile scale? Scaling increases complexity, as we saw agile is about reducing the management of complexity, so inevitably the more you scale, the less agile you become. If you look at how Mother Nature does it, it doesn’t scale, at least not how we do with companies, Nature has fairly horizontal hierarchy, there is no 5km tall animals, or animals managing thousands of other animals, or a single animal concentrating all the power. Instead, we have many small, independent creatures, managing small amounts of complexity each, which allows them to keep adapting and surviving together, Nature is agile.
 
 Thanks for reading!
+
+## Comments
+
+{% blockquote @yourusername https://optional-link.com %}
+If you'd like to add a comment, please [send a merge request adding your comment here](https://github.com/rogeriochaves/blog/edit/master/source/_posts/%%filename%%), copying this block as an example
+{% endblockquote %}
