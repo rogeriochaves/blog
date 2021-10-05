@@ -2,7 +2,7 @@
 title: Why Agile Works
 ---
 
-A lot is discussed on how to do agile, if a given company or framework even is agile, if you should use sprints or not (you shouldn’t), if agile can scale, etc. On those discussions, the [agile manifesto](https://agilemanifesto.org/) is routinely brought up with those famous four lines:
+A lot is discussed on how to do agile, if a given company or framework even is agile, if you should use sprints or Kanban, Scrum or XP, if agile can scale, etc. On those discussions, the [agile manifesto](https://agilemanifesto.org/) is routinely brought up with those famous four lines:
 
 > Individuals and interactions over processes and tools \
 > Working software over comprehensive documentation \
