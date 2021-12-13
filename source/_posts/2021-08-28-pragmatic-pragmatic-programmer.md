@@ -66,7 +66,7 @@ The broken-window theory for code feels like a nice idea, but feeling is not eno
 ## Dogmatic Programmer: gullible, does what feels right, following idealistic theories
 ## Pragmatic Programmer: skeptical, values scientific rigour (when possible)
 
-Now, the (when possible) part is very important, and very pragmatic too, because to be honest, in software development that's rarelly possible. The more and more I learned about statistics and biases in those recent years, the most I realized that having a proper experiment to discover causality is an extremely hard thing, and in software development, basically impossible.
+Now, the (when possible) part is very important, and very pragmatic too, because to be honest, in software development that's rarelly possible. The more I learned about statistics and biases in those recent years, the more I realized that having a proper experiment to discover causality is an extremely hard thing, and in software development, basically impossible.
 
 We cannot build thousands of the same systems, with thousands of developers and add just a small variation (say, broken-window policy) to do a proper [RCT](https://en.m.wikipedia.org/wiki/Randomized_controlled_trial) and see it's effect. We don't even know if static types are better than dynamic ones, [we have many studies](https://danluu.com/empirical-pl/), but all biased or possibly confounded in a way or another.
 
@@ -91,7 +91,7 @@ Most of the times the book assume all conclusions are self evident, there are ma
 
 > you can discipline yourself to write software that’s good enough—good enough for your users, for future maintainers, for your own peace of mind. You’ll find that *you are more productive* and *your users are happier*. And you may well find that *your programs are actually better* for their shorter incubation.
 
-Why?? I mean I'm obviously all in favor of shipping ealier (generally), but why does it make things better? I feel the authors could have done a way better job explaining how production is the real test to our systems, how real life is so complex that is impossible to predict all the variables,  like Nassim Taleb explains so well in Anti-fragile, so we have to be pragmatic and confess we don't know jack, making it clear why the base of Agile actually works (but not always! Context matters)
+Why?? I mean I'm obviously all in favor of shipping ealier (generally), but why does it make things better? I feel the authors could have done a way better job explaining how production is the real test to our systems, how real life is so complex that is impossible to predict all the variables,  like Nassim Taleb explains so well in Anti-fragile, so we have to be pragmatic, accept there is a lot of variables we don't know, and that it's cheaper to allow real-life to give us this feedback then upfront predicting them all, this is [why Agile works](https://rchaves.app/why-agile-works/) (but not always! Context matters)
 
 > Your ability to learn new things is your most important *strategic* asset.
 
