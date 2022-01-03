@@ -197,15 +197,59 @@ Now there are many statements they make I'd like to comment on:
 
 Conversely, if you have everything expressed in a single, centralized place and you need to change it you are **forced to remember all the places** that depend on that. This can take a long time, time which may not even pay off for the inconsistency. It could be that the place you "forgot" to change actually was not that important at all, like a page nobody visits, a feature no one uses. If it is important, you will notice it. Again it depends on context, I touch on this on the [Designed v Evolutionary Code](https://rchaves.app/designed-v-evolutionary-code/) post too.
 
-Additionaly, no duplication at all can actually be pretty risky. Remember [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)? Because everyone decided to not duplicate something that can be implemented [in 1 line of code](https://stackoverflow.com/a/13861999) pretty much all javascript projects in the planet were broken for a day. When you have duplication, you can change one thing at a time without risks of breaking the other duplicated pieces, and bringing the whole system to it's knees, like [it happened many times recently with big tech](https://rchaves.app/our-microservices-are-not-antifragile/).
-
-To quote Nassim Taleb, "Redundancy is ambiguous because it seems like a waste if nothing unusual happens. Except that something unusual happens — usually. Nature is filled with "inefficient" redundancies. Animals have two lungs, two kidneys, and two testicles. Since one in a pair of organs can become disabled through disease or trauma, it pays to have a spare"
+Additionaly, no duplication at all can actually be pretty risky. Remember [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)? Because everyone decided to not duplicate something that can be implemented [in 1 line of code](https://stackoverflow.com/a/13861999) pretty much all javascript projects in the planet were broken for a day. When you have central critical pieces without any duplication, you increase the chances of bringing the whole system to it's knees, like [it happened many times recently with big tech](https://rchaves.app/our-microservices-are-not-antifragile/).
 
 > DRY is about the duplication of knowledge, of intent. It’s about expressing the same thing in two different places, *possibly in two totally different ways*.
 
-And why is this necessarily a bad thing? I have to bring up Taleb again, there is a reason why evolution brought us so many different animals, which survive through different ways, there is a reason why we have anti-monopoly laws, having different companies doing the same thing in different ways, this way you get the chance that one of them is actually better than the other.
+When I say duplication is good for resilience, some may think about server redundancy, but no, I really mean intent duplication, which the authors rejects. Why is "two tottally different ways" necessarily a bad thing? Devs love redundancy of servers but despite duplication of code, problem is, having thousands of servers in hundreds of availability zones still won't prevent you from deploying a catastrophic commit.
 
-To be continued...
+If you think about it, different codebases doing the same thing is like redundancy for the overall system, for ideas, for bugs. There is a reason why evolution brought us so many different animals, which survive through different ways, there is a reason why we have anti-monopoly laws, causing different companies to do the same thing but in different ways, this way you get the chance that one of them is actually better than the other.
+
+---
+
+## Dogmatic Programmer: let’s make everything abstract, what if we need to switch databases?
+
+## Pragmatic Programmer: we will never switch databases
+
+On topic 11 - Reversibility, the authors go on about how we should decouple third-party services to keep our system flexible, and of course they give the classic example of the database switch:
+
+> “But you said we’d use database XYZ! We are 85% done coding the project, we can’t change now!”
+
+In practice there are not a lot of reasons for switching one relational database with another, and even if you do, it will probably not be crazy hard, SQL is very standardized (much easier to learn than the thousands of ORMs APIs we have), on a small codebase find and replace can do most of the trick. Even if a big codebase decides to switch, it will be incremental and have a migration plan anyway, it will never be “just change a config on the ORM”. Now if the change is for a completely different way to store the data to some domain specific NoSQL, or replace those MySQL queues with Kafka, then probably your abstractions won’t hold, and you will need to change your architecture to really take advantage of it anyway.
+
+An abuse of “reversibility” causes for example Generic Cloud Usage, [from ThoughtWorks radar](https://www.thoughtworks.com/radar/techniques/generic-cloud-usage):
+
+> We see organizations limiting their use of the cloud to only those features common across all cloud providers—thereby missing out on the providers' unique benefits. We see organizations making large investments in home-grown abstraction layers that are too complex to build and too costly to maintain to stay cloud agnostic.
+>
+> [...] which reminds us of the lowest common denominator scenario we saw 10 years ago when companies avoided many advanced features in relational databases in an effort to remain vendor neutral
+
+## Give a random number
+
+The book then goes to Estimating, on topic 15, which is perhaps the most debated point in software development. They start already with a bad example:
+
+> The Library of Congress in Washington, DC, currently has about 75 terabytes of digital information online. Quick! How long will it take to send all that information over a 1Gbps network? How much storage will you need for a million names and addresses? How long does it take to compress 100Mb of text? How many months will it take to deliver your project?
+
+The last question is completely different from all the others, they are conflating estimations that have a super simple and linear model, where you can easily find all the variables, with a complex non-linear estimation where no good model exists. Deceiving the reader into thinking that estimating a software project is as easy as calculating bandwidth is an awful thing to do.
+
+Then they go on some tips on how to improve your estimations, telling about building a model and breaking it in smaller pieces, they give a lot of focus on getting better at estimating, but the actual valuable thing is some communication tips in the middle, like saying weeks instead of days to convey less precision, and giving multiple range estimations instead of a point estimate
+
+## Dogmatic 1: believes on estimations, and that one day they they will get very good at it (this day never comes)
+## Dogmatic 2: believes that estimations are never possible to get right anyway, so they are useless
+## Pragmatic: manages expectations, not accuracy
+
+You see, developers are actually not that bad on estimating, getting around 60% of the estimations right[[1]](https://www.uio.no/studier/emner/matnat/ifi/nedlagte-emner/INF5500/h09/undervisningsmateriale/estimation-error.pdf)[[2]](https://www.sciencedirect.com/science/article/pii/S0164121202000213), people hypothesize that developers are [good at estimating the median, not the mean](https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html). So the problem really is on the blowup factor: eventually something will get very wrong, and not even the most experienced estimator will be able to predict it, when that happens, expectations management skills is what really counts.
+
+Considering that, the True Pragmatic Programmer is not in favor or against estimations, it’s just a tool, which they know is flawed (sometimes exponentially flawed), still sometimes the most available one to align teams more or less on what to do, or as a way to get others thinking more deeply about a feature, so they use it when useful, and avoid it (or just give a random number) when useless.
+
+When someone says “the deadline is October” for a pragmatic programmer, they ask “why?”. More often than not you will find out that those are just self-inflicted deadlines: no client knows about this feature you want to launch, other teams are unaware, it wouldn’t really affect much anyone, it’s just politics or a random date someone came up with.
+
+Other times, the deadline actually makes sense, maybe some other team depends on that for a pressing issue, or maybe there is a regulation change, and even though you might use some fancy tricks of iterative development to avoid that, sometimes is just easier to agree on a date and that’s it. Pragmatic.
+
+---
+
+Well I think that’s enough about the book, this post is too long already, but I hope I manage to convey the idea of what a pragmatic actually means, the definition that is closer to the dictionary one.
+
+Thanks for reading! [Follow me on Twitter](https://twitter.com/_rchaves_), and drop a message there if you disagree or want to discuss about any of the points.
 
 ## Comments
 
