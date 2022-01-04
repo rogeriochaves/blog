@@ -19,7 +19,7 @@ My understanding of pragmatic is the same as the definitions given above, and it
 
 ## The Pragmatic Programmer: The Good Parts
 
-The book actually have some very good and pragmatic points, I will start with those because I think they should be the very central idea of the book:
+The book actually have some very good and pragmatic points, I will start with those because I think they should have been the central idea of the book:
 
 > **CRITICAL THINKING**
 >
@@ -29,9 +29,9 @@ The book actually have some very good and pragmatic points, I will start with th
 
 Critical Thinking, that's it, for me that's in the very core definition of what does it mean to be Pragmatic, don't be fooled by dogmas and hype, keep your foot on the ground.
 
-Still for some reason they say it's the *last* important part (I don't know why it isn't the first topic on the book), and later they throw lots and lots of dogmas at you, without explaining the reasoning behind them, contradicting this very same paragraph
+Still for some reason they say it's the *last* important part (I don't know why it isn't the first topic on the book), and later they throw lots and lots of dogmas at you, without explaining the reasoning behind them, contradicting this very same paragraph.
 
-They go further on the *Critical Thinking* topic with some tips:
+They go further on *Critical Thinking* with some tips:
 
 > **Ask the “Five Whys”**
 >
@@ -57,9 +57,9 @@ At the same time the book argues for *Good-Enough Software*, it argues for the b
 
 > Don’t leave “broken windows’’ (bad designs, wrong decisions, or poor code) unrepaired. Fix each one as soon as it is discovered.
 
-This is already somewhat contradictory to the *Good-Enough Software* point made on the book just two topic latter, but the worse is that it's actually based on a theory that was [already debunked](https://news.northeastern.edu/2019/05/15/northeastern-university-researchers-find-little-evidence-for-broken-windows-theory-say-neighborhood-disorder-doesnt-cause-crime/)
+This is already somewhat contradictory to the *Good-Enough Software* point made on the book just two topics later, but the worse is that it's actually based on a theory that was [already debunked](https://news.northeastern.edu/2019/05/15/northeastern-university-researchers-find-little-evidence-for-broken-windows-theory-say-neighborhood-disorder-doesnt-cause-crime/)
 
-A lot of times the story of crime reduction in NY with the broken-window policy is used to back-up this story, but a [quick read](https://www.quora.com/How-did-the-New-York-City-crime-rate-drop-in-the-1990s) shows you that this is a mere correlation, not causation, a change of police strategy to focus on the bigger crimes rather than on petty ones might have actually been much more effective, together with abortion legalization and many other candidates, nobody knows for sure.
+A lot of times the story of crime reduction in NY with the broken-window policy is used to back-up this, but a [quick read](https://www.quora.com/How-did-the-New-York-City-crime-rate-drop-in-the-1990s) shows you that this is a mere correlation, not causation, a change of police strategy to focus on the bigger crimes rather than on petty ones might have actually been much more effective, together with abortion legalization and many other candidates, nobody knows for sure.
 
 The broken-window theory for code feels like a nice idea, but feeling is not enough, Dogmatic Programmers are gullible and like theories, but a True Pragmatic Programer is skeptical, and values scientific rigour (when possible).
 
@@ -68,16 +68,16 @@ The broken-window theory for code feels like a nice idea, but feeling is not eno
 
 Now, the (when possible) part is very important, and very pragmatic too, because to be honest, in software development that's rarelly possible. The more I learned about statistics and biases in those recent years, the more I realized that having a proper experiment to discover causality is an extremely hard thing, and in software development, basically impossible.
 
-We cannot build thousands of the same systems, with thousands of developers and add just a small variation (say, broken-window policy) to do a proper [RCT](https://en.m.wikipedia.org/wiki/Randomized_controlled_trial) and see it's effect. We don't even know if static types are better than dynamic ones, [we have many studies](https://danluu.com/empirical-pl/), but all biased or possibly confounded in a way or another.
+We cannot build thousands of the same systems, with thousands of developers and add just a small variation (say, broken-window policy) to do a proper [RCT](https://en.m.wikipedia.org/wiki/Randomized_controlled_trial) and see it's effect. We don't even know if static types are better than dynamic ones, [we have many studies](https://danluu.com/empirical-pl/), but all confounded or biased in a way or another.
 
-So many times we have no choice, being pragmatic means you have to use what is practically available: subjective experiences, biased experiments, or even your favorite dogma when there is nothing left. Practically, you need to take a decision (or even decide to not take one), but keeping your skepticism if you want to be pragmatic, fix your foot on the ground.
+Most of the times we have no choice, being pragmatic means you have to use what is practically available: subjective experiences, biased experiments, or even your favorite dogma when there is nothing left. Practically, you need to take a decision (or even decide to not take one), but keeping your skepticism if you want to be pragmatic, fix your foot on the ground.
 
 In that vein, I will tell you a subjective experience I had that touches the broken-window theory, and I wrote about it on the blogpost [Designed v Evolutionary Code](https://rchaves.app/designed-v-evolutionary-code/). It's not that I'm against broken-window theory or that I'm in favor of it, it's just that **it depends**. I take the book's own advice of **What’s the context?** to give you an example of just two cases where it probably works and where it probably doesn't, following [Kent Back's 3X Theory](https://www.youtube.com/watch?v=FlJN6_4yI2A):
 
-1. If you are in exploration mode, most of the code you produce has no value and you will throw away, you need to iterate faster, here broken windows are totally fine, you only focus on the biggest problem, law of diminishing returns kicks in and fixing windows doesn't pay-off at all
-2. If you are in extraction mode, on a huge system, even a single flaw can be cathastrophic and cost millions of dollars or lifes (you are under [power law](https://en.m.wikipedia.org/wiki/Power_law)), here you don't want to keep a single window broken, and hope for the best
+1. If you are in exploration mode, most of the code you produce has no value and you will throw away, you need to iterate faster, here broken windows are totally fine, you focus on the current biggest problem only, law of diminishing returns kicks in and fixing windows doesn't pay-off at all, intead you move quickly to the next biggest problem
+2. If you are in extraction mode, on a huge system, even a single flaw can be cathastrophic and cost millions of dollars or lifes (you are under [power law](https://en.m.wikipedia.org/wiki/Power_law)), here you don't want to keep a single window broken, you want to try your best to be sure all tiny pieces are working as they should and hope for the best
 
-A True Pragmatic Programmer is skeptical of stories and dogmas, but the book is not skeptical at all, it tries to convice you using short stories and anecdotes, comming from the authors' experience, without any depthness, cues for the possibility of being wrong, and sometimes not even a short explanation, for example:
+A True Pragmatic Programmer is skeptical of stories and dogmas, but the book is not skeptical at all, it tries to convice you using anecdotes, comming from the authors' experience, without any depthness, cues for the possibility of being wrong, and sometimes not even a short explanation, for example:
 
 > **Duplication with Data Sources**
 >
@@ -113,7 +113,7 @@ Chapter 2 is titled "A Pragmatic Approach", and it starts with that, I kid you n
 >
 > There are certain tips and tricks that apply at all levels of software development, processes that are virtually universal, and ideas that are almost axiomatic
 
-So their *Pragmatic* approach is to bring us a chapter full of axioms, not to challenge them, but to tell us they are universal. Say what!? This in my mind is absolutely non-pragmatic. I expect to find axioms on Clean Code, that's what I bought *that* book, not here, here I expected to find counter-axioms, cases of when you have to actually be pragmatic, take your head off the clouds and break those axioms when it makes *practical* sense. This chapter should really be called *A Dogmatic Approach*.
+So their *Pragmatic* approach is to bring us a chapter full of axioms, not to challenge them, but to tell us they are universal 🤯. Say what!? This is absolutely NOT pragmatic. I expect to find axioms on Clean Code, that's why I bought *that* book, not here, here I expected to find counter-axioms, cases of when you have to actually be pragmatic, take your head off the clouds and break those axioms when it makes *practical* sense. This chapter should really be called *A Dogmatic Approach*.
 
 They continue:
 
@@ -197,11 +197,11 @@ Now there are many statements they make I'd like to comment on:
 
 Conversely, if you have everything expressed in a single, centralized place and you need to change it you are **forced to remember all the places** that depend on that. This can take a long time, time which may not even pay off for the inconsistency. It could be that the place you "forgot" to change actually was not that important at all, like a page nobody visits, a feature no one uses. If it is important, you will notice it. Again it depends on context, I touch on this on the [Designed v Evolutionary Code](https://rchaves.app/designed-v-evolutionary-code/) post too.
 
-Additionaly, no duplication at all can actually be pretty risky. Remember [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)? Because everyone decided to not duplicate something that can be implemented [in 1 line of code](https://stackoverflow.com/a/13861999) pretty much all javascript projects in the planet were broken for a day. When you have central critical pieces without any duplication, you increase the chances of bringing the whole system to it's knees, like [it happened many times recently with big tech](https://rchaves.app/our-microservices-are-not-antifragile/).
+Additionaly, no duplication at all can actually be pretty risky. Remember [left-pad](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)? Because everyone decided to not duplicate something that can be implemented [in 1 line of code](https://stackoverflow.com/a/13861999) pretty much all javascript deployments in the planet were broken for a day. When you have central critical pieces without any duplication, you increase the chances of bringing the whole system to it's knees, like [it happened many times recently with big tech](https://rchaves.app/our-microservices-are-not-antifragile/).
 
 > DRY is about the duplication of knowledge, of intent. It’s about expressing the same thing in two different places, *possibly in two totally different ways*.
 
-When I say duplication is good for resilience, some may think about server redundancy, but no, I really mean intent duplication, which the authors rejects. Why is "two tottally different ways" necessarily a bad thing? Devs love redundancy of servers but despite duplication of code, problem is, having thousands of servers in hundreds of availability zones still won't prevent you from deploying a catastrophic commit.
+When I say duplication is good for resilience, some may think about server redundancy, but no, I really mean intent duplication, which the authors rejects. Why is "two totally different ways" necessarily a bad thing? Devs love redundancy of servers but despite duplication of code, problem is, having thousands of servers in hundreds of availability zones still won't prevent you from deploying a catastrophic commit.
 
 If you think about it, different codebases doing the same thing is like redundancy for the overall system, for ideas, for bugs. There is a reason why evolution brought us so many different animals, which survive through different ways, there is a reason why we have anti-monopoly laws, causing different companies to do the same thing but in different ways, this way you get the chance that one of them is actually better than the other.
 
@@ -215,7 +215,7 @@ On topic 11 - Reversibility, the authors go on about how we should decouple thir
 
 > “But you said we’d use database XYZ! We are 85% done coding the project, we can’t change now!”
 
-In practice there are not a lot of reasons for switching one relational database with another, and even if you do, it will probably not be crazy hard, SQL is very standardized (much easier to learn than the thousands of ORMs APIs we have), on a small codebase find and replace can do most of the trick. Even if a big codebase decides to switch, it will be incremental and have a migration plan anyway, it will never be “just change a config on the ORM”. Now if the change is for a completely different way to store the data to some domain specific NoSQL, or replace those MySQL queues with Kafka, then probably your abstractions won’t hold, and you will need to change your architecture to really take advantage of it anyway.
+In practice there are not a lot of reasons for switching one relational database with another, and even if you do, it will probably not be crazy hard, SQL is very standardized (much easier to learn than the thousands of ORMs APIs we have), on a small codebase find and replace can do most of the trick. Even if a big codebase decides to switch, it will be incremental with a migration plan anyway, it will never be “just change a config on the ORM”. Now if the change is for a completely different way to store the data to some domain specific NoSQL, or replace those MySQL queues with Kafka, then probably your abstractions won’t hold anyway, you will need to change your architecture to really take advantage of it.
 
 An abuse of “reversibility” causes for example Generic Cloud Usage, [from ThoughtWorks radar](https://www.thoughtworks.com/radar/techniques/generic-cloud-usage):
 
@@ -225,23 +225,23 @@ An abuse of “reversibility” causes for example Generic Cloud Usage, [from Th
 
 ## Give a random number
 
-The book then goes to Estimating, on topic 15, which is perhaps the most debated point in software development. They start already with a bad example:
+The book then goes to Estimating, on topic 15, which is perhaps the most debated point in software development. As usual, they start with a bad example:
 
 > The Library of Congress in Washington, DC, currently has about 75 terabytes of digital information online. Quick! How long will it take to send all that information over a 1Gbps network? How much storage will you need for a million names and addresses? How long does it take to compress 100Mb of text? How many months will it take to deliver your project?
 
-The last question is completely different from all the others, they are conflating estimations that have a super simple and linear model, where you can easily find all the variables, with a complex non-linear estimation where no good model exists. Deceiving the reader into thinking that estimating a software project is as easy as calculating bandwidth is an awful thing to do.
+The last question is completely different from all the others, they are conflating estimations that have a super simple and linear models, where you can easily find all the variables, with a complex non-linear estimation where no good model exists. Deceiving the reader into thinking that estimating a software project is as easy and reliable as calculating bandwidth is an awful thing to do.
 
-Then they go on some tips on how to improve your estimations, telling about building a model and breaking it in smaller pieces, they give a lot of focus on getting better at estimating, but the actual valuable thing is some communication tips in the middle, like saying weeks instead of days to convey less precision, and giving multiple range estimations instead of a point estimate
+Then they go on some tips on how to improve your estimations, telling about building a model and breaking it in smaller pieces, they give a lot of focus on getting better at estimating, but the actual valuable thing is some communication tips in the middle, like saying weeks instead of days to convey less precision, and giving multiple range estimations instead of a point estimate.
 
 ## Dogmatic 1: believes on estimations, and that one day they they will get very good at it (this day never comes)
 ## Dogmatic 2: believes that estimations are never possible to get right anyway, so they are useless
 ## Pragmatic: manages expectations, not accuracy
 
-You see, developers are actually not that bad on estimating, getting around 60% of the estimations right[[1]](https://www.uio.no/studier/emner/matnat/ifi/nedlagte-emner/INF5500/h09/undervisningsmateriale/estimation-error.pdf)[[2]](https://www.sciencedirect.com/science/article/pii/S0164121202000213), people hypothesize that developers are [good at estimating the median, not the mean](https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html). So the problem really is on the blowup factor: eventually something will get very wrong, and not even the most experienced estimator will be able to predict it, when that happens, expectations management skills is what really counts.
+You see, developers are actually not that bad on estimating, getting around 60% of the estimations right[[1]](https://www.uio.no/studier/emner/matnat/ifi/nedlagte-emner/INF5500/h09/undervisningsmateriale/estimation-error.pdf)[[2]](https://www.sciencedirect.com/science/article/pii/S0164121202000213), people hypothesize that developers are [good at estimating the median, not the mean](https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model.html). So the problem really is on the blowup factor: eventually something will get very wrong, and not even the most experienced estimator will be able to predict it, when that happens (and it does), expectations management skills is what really counts.
 
-Considering that, the True Pragmatic Programmer is not in favor or against estimations, it’s just a tool, which they know is flawed (sometimes exponentially flawed), still sometimes the most available one to align teams more or less on what to do, or as a way to get others thinking more deeply about a feature, so they use it when useful, and avoid it (or just give a random number) when useless.
+Considering that, the True Pragmatic Programmer is not in favor or against estimations: it’s just a tool, which they know is flawed (sometimes exponentially flawed), still sometimes the most available one to align teams more or less on what to do, or as a way to get others thinking more deeply about a feature, so they use it when useful, and avoid it (or just give a random number) when useless.
 
-When someone says “the deadline is October” for a pragmatic programmer, they ask “why?”. More often than not you will find out that those are just self-inflicted deadlines: no client knows about this feature you want to launch, other teams are unaware, it wouldn’t really affect much anyone, it’s just politics or a random date someone came up with.
+When someone says “the deadline is October” for a pragmatic programmer, they ask “why?” (those five whys mentioned by the book). More often than not I've found out that those are just self-inflicted deadlines: no client knows about this feature you want to launch, other teams are unaware, it wouldn’t really affect much anyone, it’s just politics or a random date someone came up with.
 
 Other times, the deadline actually makes sense, maybe some other team depends on that for a pressing issue, or maybe there is a regulation change, and even though you might use some fancy tricks of iterative development to avoid that, sometimes is just easier to agree on a date and that’s it. Pragmatic.
 
