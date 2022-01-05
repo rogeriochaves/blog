@@ -251,6 +251,12 @@ Well I think that’s enough about the book, this post is too long already, but 
 
 Thanks for reading! [Follow me on Twitter](https://twitter.com/_rchaves_), and drop a message there if you disagree or want to discuss about any of the points.
 
+---
+
+*Addendum 1: The version of the book I have and this blogpost is based on is the 20th Anniversary Edition, not the classic one.*
+
+*Addendum 2: The article came out very harsh, so I need to clarify that I do in fact think The Pragmatic Programmer is a very valuable book for beginner developers, but not advanced as I hoped so. This made me want to write this blogpost, to express what I actually wanted to read, the book I wish existed.*
+
 ## Comments
 
 {% blockquote @yourusername https://optional-link.com %}
