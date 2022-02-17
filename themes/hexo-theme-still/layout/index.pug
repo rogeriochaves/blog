@@ -1,7 +1,15 @@
 extends partial/layout.pug
 
 block container
+    include mixins/post.pug
+
     p My name is Rogério, welcome to my site, here you can find links to my work and read my #[a(href=url_for("/blog")) blog]
+
+    h2 Recent Posts
+
+    +recentPosts()
+
+    a(href=url_for("/blog")) More
 
     h2 Open-Source Apps
     p
