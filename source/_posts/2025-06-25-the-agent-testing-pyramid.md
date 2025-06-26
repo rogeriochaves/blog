@@ -78,4 +78,4 @@ As agent capabilities continue to advance, we expect the testing pyramid to evol
 
 But the fundamental insight – that we need to test both the components and their integration across multiple conversation turns – is likely to remain true regardless of how the technology changes.
 
-I've created [Scenario](https://github.com/scenarioai/scenario) exactly for this purpose, a powerful framework to get started with simulation-based testing, check it out.
+I've created [Scenario](https://github.com/langwatch/scenario) exactly for this purpose, a powerful framework to get started with simulation-based testing, check it out.
